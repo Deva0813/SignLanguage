@@ -7,7 +7,8 @@ import numpy as np
 
 model = tf.keras.models.load_model('action.h5')
 
-actions = np.array(['hello', 'thanks', 'iloveyou'])
+actions = np.array(['hello', 'i love you', '1', '2', '3',
+                   '4', '5', '6', '7', '8', '9', '0'])
 
 mp_holistic = mp.solutions.holistic  # Holistic model
 mp_drawing = mp.solutions.drawing_utils  # Drawing utilities
@@ -58,7 +59,7 @@ def extract_keypoints(results):
 #     return txt
 
 
-st.title("Sing Language Translator")
+st.title("Indian Sign Language Detection")
 
 st.markdown("<hr/>", unsafe_allow_html=True)
 
